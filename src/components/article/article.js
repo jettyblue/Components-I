@@ -87,6 +87,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Boom Shakalaka',
+    date: 'Jan 1st, 1999',
+    firstParagraph: `Boom Boom Boom Boom Boom Boom Boom... Boom Boom Boom Boom Boom Boom Boom... Boom Boom Boom Boom Boom Boom Boom... Boom Boom Boom Boom Boom Boom Boom.... Boom Boom Boom Boom Boom Boom Boom... Boom Boom Boom. `,
+
+    secondParagraph: `Shaka Shaka Shaka Shaka Shaka Shaka Shaka... Shaka Shaka Shaka Shaka Shaka Shaka Shaka... Shaka Shaka Shaka Shaka Shaka Shaka Shaka... Shaka Shaka Shaka Shaka Shaka Shaka Shaka... Shaka Shaka Shaka Shaka Shaka Shaka Shaka... Shaka Shaka Shaka. `,
+
+    thirdParagraph: `Laka Laka Laka Laka Laka Laka Laka... Laka Laka Laka Laka Laka Laka Laka... Laka Laka Laka Laka Laka Laka Laka... Laka Laka Laka Laka Laka Laka Laka... Laka Laka Laka Laka Laka Laka Laka... Laka Laka Laka.`
   }
 ];
 
@@ -122,7 +131,7 @@ function articleMaker(obj) {
   expandButton.textContent = '+';
 
   expandButton.addEventListener('click', () => {
-    expandButton.classList.toggle('article-open');
+    article.classList.toggle('article-open');
   });
 
   return article;
@@ -135,7 +144,7 @@ const articleElem = data.map(data => {
 
 articleElem.forEach(elem => {
   articles.appendChild(elem);
-})
+});
 
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
